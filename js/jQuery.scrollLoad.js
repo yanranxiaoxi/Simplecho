@@ -1,0 +1,6 @@
+/**
+ * Created by Falost on 2017/3/29.
+ * Name:jQuery.scrollLoad.js
+ * 滚动响应加载页面图片
+ */
+!function(e){e.fn.scrollLoad=function(t){var n={src:"data-src",time:300,t:this},o=e.extend(n,t),i={_init:function(){var e=o.t;if(null==e)return!1;var t=window.pageYOffset?window.pageYOffset:window.document.documentElement.scrollTop,r=t+Number(window.innerHeight?window.innerHeight:document.documentElement.clientHeight),u=e.find("img"),l=u.length;if(!l)return!1;for(var c=0;c<l;c++){var d=u[c].getAttribute(n.src),a=u[c],m=a.nodeName.toLowerCase();a&&(postPage=a.getBoundingClientRect().top+window.document.documentElement.scrollTop+window.document.body.scrollTop,postWindow=postPage+Number(i._getStyle(a,"height").replace("px","")),(postPage>t&&postPage<r||postWindow>t&&postWindow<r)&&("img"===m&&null!==d&&a.setAttribute("src",d),a=null))}},_camelize:function(e){return e.replace(/-(\w)/g,function(e,t){return t.toUpperCase()})},_getStyle:function(e,t){if(2!=arguments.length)return!1;var n=e.style[i._camelize(t)];if(!n)if(document.defaultView&&document.defaultView.getComputedStyle){var o=document.defaultView.getComputedStyle(e,null);n=o?o.getPropertyValue(t):null}else e.currentStyle&&(n=e.currentStyle[i._camelize(t)]);return"auto"==n?"":n}};return window.onscroll=function(){setTimeout(function(){i._init()},n.time)},i._init()}}(jQuery);

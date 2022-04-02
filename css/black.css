@@ -1,0 +1,123 @@
+.gt-bg-theme-color-first {
+	background: #151617!important;
+}
+
+.gt-bg-theme-color-second {
+	background: #1d1e1f!important;
+}
+
+.gt-bg-content-color-first {
+	background: #e0eaef!important;
+}
+
+.gt-bg-content-color-second {
+	background: #62686b!important;
+}
+
+.gt-bg-accent-color-first {
+	background: #64b587!important;
+}
+
+.gt-bg-accent-color-second {
+	background: RGBA(100,181,135,0.14)!important;
+}
+
+.gt-c-theme-color-first {
+	color: #151617!important;
+}
+
+.gt-c-theme-color-second {
+	color: #1d1e1f!important;
+}
+
+.gt-c-content-color-first {
+	color: #e0eaef!important;
+}
+
+.gt-c-content-color-second {
+	color: #62686b!important;
+}
+
+.gt-c-accent-color-first {
+	color: #64b587!important;
+}
+
+.gt-c-accent-color-second {
+	color: RGBA(100,181,135,0.14)!important;
+}
+
+body {
+	color: #e0eaef!important;
+}
+
+a {
+	color: #64b587!important;
+}
+
+.post-content h1 {
+	display: inline-block;
+	color: #e0eaef!important;
+	position: relative!important;
+	background: linear-gradient(180deg, transparent 75%, RGBA(100,181,135,0.4) 0)!important;
+}
+
+.post-content h2 {
+	display: inline-block;
+	color: #e0eaef!important;
+	position: relative!important;
+	background: linear-gradient(180deg, transparent 75%, RGBA(100,181,135,0.4) 0)!important;
+}
+
+.gt-a-link {
+	color: #e0eaef!important;
+	position: relative!important;
+	background: linear-gradient(180deg, transparent 75%, RGBA(100,181,135,0.4) 0)!important;
+}
+
+.gt-post-content a {
+	color: #64b587!important;
+}
+
+.gt-post-content blockquote {
+	background: RGBA(100,181,135,0.14)!important;
+	border-color: #64b587!important;
+}
+
+.gt-post-content code {
+	background: RGBA(100,181,135,0.14)!important;
+}
+
+input::placeholder {
+	color: #62686b!important;
+}
+
+.search-input {
+	color: #e0eaef!important;
+	background-color: #1d1e1f!important;
+}
+
+#comments li.comment-body {
+	border-top: 1px solid #383a3e !important;
+	background: #1d1e1f !important;
+}
+
+.comment-form {
+	background: #1d1e1f !important;
+}
+
+.OwO .OwO-body .OwO-items .OwO-item {
+	background: #1d1e1f !important;
+}
+
+#comments input, #comments textarea {
+	border-bottom: 1px solid #383a3e !important;
+}
+
+.comment-body .respond {
+	background: #1d1e1f;
+}
+
+#comments input,
+#comments textarea {
+	color: #FFF !important;
+}

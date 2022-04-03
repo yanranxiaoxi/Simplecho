@@ -8,7 +8,7 @@
 			<h2 class="post-title"><?php $this->title(); ?></h2>
 			<div class="post-info">
 				<time class="post-time gt-c-content-color-first">
-					· <?php $this->date(); ?> ·
+					发布于 · <?php $this->date(); ?> ·
 				</time>
 
 				<?php _e('# '); ?>

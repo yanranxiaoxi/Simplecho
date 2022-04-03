@@ -4,11 +4,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 function themeConfig($form) {
 	
 	// favicon 图标
-	$favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon 图标'), _t('输入图片 URL 地址, 显示 favicon 图标，留空显示默认'));
+	$favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon 图标'), _t('输入图片 URL 地址，显示 favicon 图标，留空显示默认'));
 	$form->addInput($favicon);
 
 	// 首页 LOGO
-	$logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, NULL, _t('首页 LOGO'), _t('输入图片 URL 地址, 在网站首页显示 LOGO，留空显示默认'));
+	$logo = new Typecho_Widget_Helper_Form_Element_Text('logo', NULL, NULL, _t('首页 LOGO'), _t('输入图片 URL 地址，在网站首页显示 LOGO，留空显示默认'));
 	$form->addInput($logo);
 	
 	// 首页网站描述
@@ -35,12 +35,12 @@ function themeConfig($form) {
 	$form->addInput($top);
 
 	// 禁止开启控制台
-	$f12 = new Typecho_Widget_Helper_Form_Element_Radio('f12',
+	$consolePanelBan = new Typecho_Widget_Helper_Form_Element_Radio('consolePanelBan',
 		array('able' => _t('启用'),
 			'disable' => _t('禁用'),
 		),
-		'disable', _t('禁止开启控制台'), _t('禁止 F12 / 审查开启控制台'));
-	$form->addInput($f12);
+		'disable', _t('禁止开启控制台'), _t('禁止 F12 / 审查开启控制台（其实大部分情况下没有用）'));
+	$form->addInput($consolePanelBan);
 
 	// 百度收录自动推送
 	$baiduPush = new Typecho_Widget_Helper_Form_Element_Radio('baiduPush',
@@ -54,28 +54,64 @@ function themeConfig($form) {
 	$baiduPushUrl = new Typecho_Widget_Helper_Form_Element_Text('baiduPushUrl', NULL, NULL, _t('百度收录自动推送接口调用地址'), _t('例如：http://data.zz.baidu.com/urls?site=https://blog.example.com&token=EvBAuXeD8MpQ5dVv'));
 	$form->addInput($baiduPushUrl);
 
+	// Gravatar 地址
+	$gravatarPrefix = new Typecho_Widget_Helper_Form_Element_Text('gravatarPrefix', NULL, NULL, _t('自定义 Gravatar 地址'), _t('例如：https://secure.gravatar.com/avatar/'));
+	$form->addInput($gravatarPrefix);
+
 	// 手动置顶文章
 	$sticky = new Typecho_Widget_Helper_Form_Element_Textarea('sticky', NULL, NULL, _t('手动置顶文章'), _t('复制首页文章要置顶的代码到这里，就是这么简单 :)'));
 	$form->addInput($sticky);
 
+	// 个人主页
+	$socialHomepage = new Typecho_Widget_Helper_Form_Element_Text('socialHomepage', NULL, NULL, _t('页底：个人主页'), _t('个人主页地址'));
+	$form->addInput($socialHomepage);
+
+	// Twitter
+	$socialTwitter = new Typecho_Widget_Helper_Form_Element_Text('socialTwitter', NULL, NULL, _t('页底：Twitter'), _t('Twitter 用户页地址'));
+	$form->addInput($socialTwitter);
+
+	// Facebook
+	$socialFacebook = new Typecho_Widget_Helper_Form_Element_Text('socialFacebook', NULL, NULL, _t('页底：Facebook'), _t('Facebook 用户页地址'));
+	$form->addInput($socialFacebook);
+
+	// Weibo
+	$socialWeibo = new Typecho_Widget_Helper_Form_Element_Text('socialWeibo', NULL, NULL, _t('页底：新浪微博'), _t('新浪微博用户页地址'));
+	$form->addInput($socialWeibo);
+
+	// Bilibili
+	$socialBilibili = new Typecho_Widget_Helper_Form_Element_Text('socialBilibili', NULL, NULL, _t('页底：哔哩哔哩动画'), _t('哔哩哔哩用户页地址'));
+	$form->addInput($socialBilibili);
+
+	// YouTube
+	$socialYouTube = new Typecho_Widget_Helper_Form_Element_Text('socialYouTube', NULL, NULL, _t('页底：YouTube'), _t('YouTube 频道页地址'));
+	$form->addInput($socialYouTube);
+
+	// GitHub
+	$socialGitHub = new Typecho_Widget_Helper_Form_Element_Text('socialGitHub', NULL, NULL, _t('页底：GitHub'), _t('GitHub 用户页地址'));
+	$form->addInput($socialGitHub);
+
 	// GitLab
-	$GitLab = new Typecho_Widget_Helper_Form_Element_Text('GitLab', NULL, NULL, _t('GitLab'), _t('GitLab 用户页地址'));
-	$form->addInput($GitLab);
+	$socialGitLab = new Typecho_Widget_Helper_Form_Element_Text('socialGitLab', NULL, NULL, _t('页底：GitLab'), _t('GitLab 用户页地址'));
+	$form->addInput($socialGitLab);
+
+	// LinkedIn
+	$socialLinkedIn = new Typecho_Widget_Helper_Form_Element_Text('socialLinkedIn', NULL, NULL, _t('页底：LinkedIn'), _t('LinkedIn 用户页地址'));
+	$form->addInput($socialLinkedIn);
 
 	// By Me A Coffee
-	$Coffee = new Typecho_Widget_Helper_Form_Element_Text('Coffee', NULL, NULL, _t('By Me A Coffee'), _t('By Me A Coffee 地址'));
-	$form->addInput($Coffee);
+	$socialCoffee = new Typecho_Widget_Helper_Form_Element_Text('socialCoffee', NULL, NULL, _t('页底：By Me A Coffee'), _t('By Me A Coffee 地址'));
+	$form->addInput($socialCoffee);
 
 	// 电子邮件
-	$EMailTo = new Typecho_Widget_Helper_Form_Element_Text('EMailTo', NULL, NULL, _t('E-Mail To'), _t('电子邮件地址，例如："mailto:admin@example.com"'));
-	$form->addInput($EMailTo);
+	$socialEMailTo = new Typecho_Widget_Helper_Form_Element_Text('socialEMailTo', NULL, NULL, _t('页底：E-Mail To'), _t('电子邮件地址，例如："mailto:admin@example.com"'));
+	$form->addInput($socialEMailTo);
 
 	// ICP 备案号
-	$ICPbeian = new Typecho_Widget_Helper_Form_Element_Text('ICPbeian', NULL, NULL, _t('ICP 备案号'), _t('输入 ICP 备案号，留空则不显示'));
+	$ICPbeian = new Typecho_Widget_Helper_Form_Element_Text('ICPbeian', NULL, NULL, _t('页底：ICP 备案号'), _t('输入 ICP 备案号，留空则不显示'));
 	$form->addInput($ICPbeian);
 
 	// 底部自定义
-	$footerContent = new Typecho_Widget_Helper_Form_Element_Textarea('footerContent', NULL, NULL, _t('底部自定义内容'), _t('位于底部 footer 内，适合放置一些 JS 内容，如网站统计、备案信息代码等'));
+	$footerContent = new Typecho_Widget_Helper_Form_Element_Textarea('footerContent', NULL, NULL, _t('页底：自定义内容'), _t('位于底部 footer 内，适合放置一些 JS 内容，如网站统计、备案信息代码等'));
 	$form->addInput($footerContent);
 }
 
@@ -109,7 +145,7 @@ function parseContent($obj) {
 			$obj->content = str_ireplace($options->src_add,$options->cdn_add,$obj->content);
 		}
 
-	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.0/img/lazyload.jpg" alt="$2" data-src="$1" />',$obj->content);
+	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.1/img/lazyload.jpg" alt="$2" data-src="$1" />',$obj->content);
 	$obj->content = preg_replace("/<a href=\"([^\"]*)\">/i", "<a href=\"\\1\" target=\"_blank\">", $obj->content);
 	echo trim($obj->content);
 }

@@ -35,10 +35,15 @@
 	
 	<div class="next-post">
 		<div class="gt-c-content-color-first" style="margin-bottom: 24px;">下一篇</div>
-		<div class="post-title gt-a-link">
+		<div id="thePrevTitle" class="post-title gt-a-link">
 			<?php $this->thePrev('%s', '没有了'); ?>
 		</div>
 	</div>
 </div>
+
+<!-- 解决 Typecho BUG：无标题文章的“下一篇文章”无法点击（标签长度为“0”） -->
+<script type="text/javascript">
+document.getElementById('thePrevTitle').innerHTML = document.getElementById('thePrevTitle').innerHTML.replace('></a>', '>无标题文章</a>');
+</script>
 
 <?php $this->need('footer.php'); ?>

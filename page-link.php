@@ -59,16 +59,16 @@ $this->need('header.php');
 	</div>
 </div>
 
-<style>
+<style type="text/javascript">
 .friend-box img { width:70px; height:70px; border-radius:50%!important; float:left; margin:0 15px 0 0!important; } .jz a { pointer-events:none; }
 </style>
 
-<script>
+<script type="text/javascript">
 (function(){let a=document.getElementById("flinks");if(a){let ns=a.querySelectorAll("li");let nsl=ns.length;let str='';let bgid=0;const bgs=["bg-white","bg-grey","bg-deepgrey","bg-blue","bg-purple","bg-green","bg-yellow","bg-red","bg-orange"];for(let i=0;i<=nsl-4;i+=4){bgid=Math.floor(Math.random()*9);str+=(`<div class="friend-box"><div class="jz"><img src="${ns[i+2].innerText}"></div><div class="flink-info"><a class="gt-c-content-color-first"href="${ns[i+1].innerText}"target="_blank">${ns[i].innerText}</a><br><div class="flink-info-desc gt-c-content-color-first">${ns[i+3].innerText}</div></div></div>`);}
 str+='</div></div>';let n1=document.createElement("div");n1.innerHTML=str;a.parentNode.insertBefore(n1,a);a.style="display: none;";}else{console.log('No such id "flinksH"');}}())
 </script>
 
-<script>
+<script type="text/javascript">
 (function(){let a=document.getElementById("flinks1");if(a){let ns=a.querySelectorAll("li");let nsl=ns.length;let str='';let bgid=0;const bgs=["bg-white","bg-grey","bg-deepgrey","bg-blue","bg-purple","bg-green","bg-yellow","bg-red","bg-orange"];for(let i=0;i<=nsl-4;i+=4){bgid=Math.floor(Math.random()*9);str+=(`<div class="friend-box"><div class="jz"><img src="${ns[i+2].innerText}"></div><div class="flink-info"><a class="gt-c-content-color-first"href="${ns[i+1].innerText}"target="_blank">${ns[i].innerText}</a><br><div class="flink-info-desc gt-c-content-color-first">${ns[i+3].innerText}</div></div></div>`);}
 str+='</div></div>';let n1=document.createElement("div");n1.innerHTML=str;a.parentNode.insertBefore(n1,a);a.style="display: none;";}else{console.log('No such id "flinksH"');}}())
 </script>  

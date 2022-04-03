@@ -5,7 +5,11 @@
 <div class="post-container">
 	<div class="post-detail gt-bg-theme-color-second">
 		<article class="gt-post-content">
+			<?php if (!empty($this->title)): ?>
 			<h2 class="post-title"><?php $this->title(); ?></h2>
+			<?php else: ?>
+			<br />
+			<?php endif; ?>
 			<div class="post-info">
 				<time class="post-time gt-c-content-color-first">
 					发布于 · <?php $this->date(); ?> ·

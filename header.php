@@ -11,7 +11,7 @@
 			'search'	=>	_t('包含关键字 %s 的文章'),
 			'tag'		=>	_t('标签 %s 下的文章'),
 			'author'	=>	_t('%s 发布的文章')
-		), '', ' - '); ?><?php if ($this->_currentPage > 1) echo '第 ' . $this->_currentPage . ' 页 - '; ?><?php $this->options->title(); ?><?php if ($this->is('index')): ?> - <?php if ($this->options->summary): ?><?php $this->options->summary(); ?><?php else: ?><?php $this->options->description(); ?><?php endif; ?><?php endif; ?>
+		), '', ' - '); ?><?php if ($this->_currentPage > 1) echo '第 ' . $this->_currentPage . ' 页 - '; ?><?php $this->options->title(); ?><?php if ($this->is('index') && !empty($this->options->summary)): ?> - <?php $this->options->summary(); ?><?php endif; ?>
 	</title>
 	<?php $this->header(); ?>
 	<?php if ($this->options->favicon): ?>

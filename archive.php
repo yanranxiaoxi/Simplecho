@@ -15,24 +15,23 @@
 		<div class="post gt-bg-theme-color-second">
 			<div class="post-left">
 				<div>
-
 					<a href="<?php $this->permalink(); ?>">
 						<span class="post-title gt-c-content-color-first"><?php $this->title(); ?></span>
 					</a>
 				</div>
-				<div class="gt-post-content post-abstract gt-c-content-color-second">
-					<p><?php $this->excerpt('200', '...'); ?></p>
-
-				</div>
+				<a href="<?php $this->permalink(); ?>">
+					<div class="gt-post-content post-abstract gt-c-content-color-second">
+						<p><?php $this->excerpt('200', '...'); ?></p>
+					</div>
+				</a>
 				<div class="post-info">
 					<time class="post-time gt-c-content-color-first">
 						发布于 · <?php $this->date(); ?> ·
 					</time>
 
-					<?php if (count($this->tags) == 0): ?>
 					<?php _e('# '); ?>
 					<?php $this->category(' # ', true, 'none'); ?>
-					<?php else: ?>
+					<?php if (count($this->tags) > 0): ?>
 					<?php _e('# '); ?>
 					<?php $this->tags(' # ', true, 'none'); ?>
 					<?php endif; ?>

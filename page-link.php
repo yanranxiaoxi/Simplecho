@@ -39,10 +39,9 @@ $this->need('header.php');
 					· <?php $this->date(); ?> ·
 				</time>
 
-				<?php if (count($this->tags) == 0): ?>
 				<?php _e('# '); ?>
 				<?php $this->category(' # ', true, 'none'); ?>
-				<?php else: ?>
+				<?php if (count($this->tags) > 0): ?>
 				<?php _e('# '); ?>
 				<?php $this->tags(' # ', true, 'none'); ?>
 				<?php endif; ?>

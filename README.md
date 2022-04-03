@@ -2,6 +2,8 @@
 
 极简风 Typecho 主题 / Simple + Echo = 💖
 
+🔗 [GitLab (Homepage)](https://gitlab.soraharu.com/XiaoXi/Simplecho) | 🔗 [GitHub](https://github.com/yanranxiaoxi/Simplecho)
+
 ## ✨ 特性
 
 这是一款移植 `Gridea For Pure` 的 Typecho 主题，额外添加了许多不错的特性：

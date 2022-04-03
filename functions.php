@@ -12,7 +12,7 @@ function themeConfig($form) {
 	$form->addInput($logo);
 	
 	// 首页网站描述
-	$summary = new Typecho_Widget_Helper_Form_Element_Text('summary', NULL, NULL, _t('首页网站描述'), _t('输入一段描述，位于首页网站名称下方，留空则不显示'));
+	$summary = new Typecho_Widget_Helper_Form_Element_Text('summary', NULL, NULL, _t('首页网站描述'), _t('输入一段描述，将会显示在网站 title 后方'));
 	$form->addInput($summary);
 	
 	//主题配色

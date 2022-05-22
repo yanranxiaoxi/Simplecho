@@ -95,18 +95,18 @@
 
 			<?php endif; ?>
 
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/img-lazy.min.js"></script>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/moment.min.js"></script>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/img-lazy.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/moment.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 			<script>mermaid.init({noteMargin: 10}, ".lang-mermaid");</script>
 			<?php if ($this->options->top == 'able'): ?>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fz6m/lamu-leimu-button@1.2/dist/lamu-leimu.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/fz6m/lamu-leimu-button@1.2/dist/lamu-leimu.min.js"></script>
 			<?php else: ?>
 			<?php endif; ?>
-			<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js'></script>
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/noticejs1.min.css" />
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/animate.min.css" />
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/notice.min.js"></script>
+			<script type="text/javascript" src='https://fastly.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js'></script>
+			<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/noticejs1.min.css" />
+			<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/animate.min.css" />
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/notice.min.js"></script>
 			<script type="text/javascript">
 				new NoticeJs({
 					text: '页面加载完成~',

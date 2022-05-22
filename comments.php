@@ -69,7 +69,7 @@
 	</div>
 	<div class="comment-content">
 		<b><?php get_comment_at($comments->coid); ?></b>
-		<?php echo preg_replace('#\@\((.*?)\)#', '<img src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/alu/$1.png">', $comments->content); // 替换关键词为表情 ?>
+		<?php echo preg_replace('#\@\((.*?)\)#', '<img src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/alu/$1.png">', $comments->content); // 替换关键词为表情 ?>
 	</div>
 	<?php if ($comments->children) { ?>
 	<div class="comment-children" id="pllc">
@@ -104,7 +104,7 @@
 					<textarea placeholder="相遇即是缘 ~ 留下足迹？" rows="8" cols="50" class="OwO-textarea" name="text" id="textarea" class="textarea" required><?php $this->remember('text'); ?></textarea>
 				</p>
 				<p style="margin-top: 20px;">
-					<!-- <span style="position:absolute; bottom:21px; cursor:pointer;" id="smiliesbutton" title="选择表情"><img src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/alu/icon_smile.gif" alt="选择表情" style="width:1.3em; height:1.3em; vertical-align:middle;"><span style="font-size:13px;">选择表情</span></span> -->
+					<!-- <span style="position:absolute; bottom:21px; cursor:pointer;" id="smiliesbutton" title="选择表情"><img src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/alu/icon_smile.gif" alt="选择表情" style="width:1.3em; height:1.3em; vertical-align:middle;"><span style="font-size:13px;">选择表情</span></span> -->
 					<div class="OwO"></div>
 					<button type="submit" id="submit" class="submit">发表评论</button>
 				</p>
@@ -175,7 +175,7 @@
 		logo: 'OωO表情',
 		container: document.getElementsByClassName('OwO')[0],
 		target: document.getElementsByClassName('OwO-textarea')[0],
-		api: 'https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/OwO.json',
+		api: 'https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/OwO.json',
 		position: 'down',
 		width: '100%',
 		maxHeight: '250px'
@@ -223,7 +223,7 @@ el=$('#comment-'+comment.parent).find('.comment-children').find('.comment-list')
 if(0==el.length)
 {$('<ol class="comment-list"></ol>').prependTo($('#comments'));el=$('#comments > .comment-list');}
 var html='<li id="comment-{coid}" class="comment-body comment-ajax comment-parent comment-odd"> <div class="comment-author"> <img class="avatar" src="{avatar}" alt="{author}" width="32" height="32"> <div class="comment-info"> <cite class="fn"><a href="{url}" rel="external nofollow" target="_blank">{author}</a></cite>  <em class="comment-meta"><a href="{permalink}">{datetime}</a></em> </div> <div class="comment-reply"><a href="{permalink}" rel="nofollow" onclick="return TypechoComment.reply(\'\comment-{coid}\'\, {coid});">回复</a></div> </div> <div class="comment-content">{content}</div> </li>';$.each(comment,function(k,v)
-{regExp=new RegExp('{'+k+'}','g');html=html.replace(regExp,v);});var reg1=/@\(([^ ]*)\)/g;html=html.replace(reg1,"<img src=\"\https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/alu/$1.png\"\>");$(html).prependTo(el);}
+{regExp=new RegExp('{'+k+'}','g');html=html.replace(regExp,v);});var reg1=/@\(([^ ]*)\)/g;html=html.replace(reg1,"<img src=\"\https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/alu/$1.png\"\>");$(html).prependTo(el);}
 $.ajax({url:'<?php $this->permalink();?>',type:'POST',data:params,dataType:'json',beforeSend:function()
 {$(".loading").css("display","block");},complete:function()
 {$(".loading").css("display","none");new NoticeJs({text:'评论成功（//▽//）',position:'middleCenter',animation:{open:'animated bounceInRight',close:'animated bounceOutLeft'}}).show();},success:function(result)

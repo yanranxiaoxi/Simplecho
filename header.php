@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="x-dns-prefetch-control" content="on" />
-	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+	<link rel="dns-prefetch" href="https://fastly.jsdelivr.net" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>
 		<?php $this->archiveTitle(array(
@@ -17,40 +17,40 @@
 	<?php if ($this->options->favicon): ?>
 	<link href="<?php $this->options->favicon(); ?>" rel="shortcut icon" />
 	<?php else: ?>
-	<link href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/icon.ico" rel="shortcut icon" />
+	<link href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/icon.ico" rel="shortcut icon" />
 	<?php endif; ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/main.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/main.min.css" />
 	<?php if ($this->options->topnavO == '0'): ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/gray.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/gray.min.css" />
 	<?php elseif ($this->options->topnavO == '1'): ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/white.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/white.min.css" />
 	<?php elseif ($this->options->topnavO == '2'): ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/black.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/black.min.css" />
 	<?php elseif ($this->options->topnavO == '3'): ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/green.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/green.min.css" />
 	<?php else: ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/gray.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/gray.min.css" />
 	<?php endif; ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/OwO.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" />
+	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/css/OwO.min.css" />
 
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/jQuery.scrollLoad.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/OwO.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fz6m/console-ban@1.5/dist/console-ban.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/jQuery.scrollLoad.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/js/OwO.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/fz6m/console-ban@1.5/dist/console-ban.min.js"></script>
 	<!--
 	<script type="text/javascript" src="https://s3.pstatp.com/cdn/expire-1-M/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+	<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
 	-->
 	<!--<script src="media/scripts/index.js"></script>-->
 	<!-- 通过自有函数输出HTML头部信息 -->
@@ -64,7 +64,7 @@
 						<?php if ($this->options->logo): ?>
 						<img class="user-avatar" src="<?php $this->options->logo(); ?>" alt="头像" />
 						<?php else: ?>
-						<img class="user-avatar" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/avatar.png" alt="头像" />
+						<img class="user-avatar" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.2/img/avatar.png" alt="头像" />
 						<?php endif; ?>
 						<div class="site-name gt-c-content-color-first">
 							<?php $this->options->title(); ?>

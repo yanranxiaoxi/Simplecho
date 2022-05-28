@@ -9,6 +9,11 @@ function getBaseUrl() {
 	return url;
 }
 
+document.querySelectorAll('pre code')
+	.forEach((block) => {
+		hljs.highlightBlock(block);
+	});
+
 $(document)
 	.pjax('a[href^=' + '"' + getBaseUrl() + '"' + ']:not(a[target="_blank"], a[no-pjax])', {
 		container: '#pjax',

@@ -95,18 +95,18 @@
 
 			<?php endif; ?>
 
-			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.5/js/img-lazy.min.js"></script>
-			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.5/js/moment.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/js/img-lazy.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/js/moment.min.js"></script>
 			<script type="text/javascript" src="https://cdn.staticfile.org/mermaid/9.1.1/mermaid.min.js"></script>
 			<script>mermaid.init({noteMargin: 10}, ".lang-mermaid");</script>
 			<?php if ($this->options->top == 'able'): ?>
-			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.5/js/lamu-leimu.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/js/lamu-leimu.min.js"></script>
 			<?php else: ?>
 			<?php endif; ?>
 			<script type="text/javascript" src='https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js'></script>
-			<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.5/css/noticejs1.min.css" />
-			<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.5/css/animate.min.css" />
-			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.5/js/notice.min.js"></script>
+			<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/css/noticejs1.min.css" />
+			<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/css/animate.min.css" />
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/js/notice.min.js"></script>
 			<script type="text/javascript">
 				new NoticeJs({
 					text: '页面加载完成~',

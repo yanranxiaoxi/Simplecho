@@ -100,7 +100,7 @@
 			<script type="text/javascript" src="https://cdn.staticfile.org/mermaid/9.1.1/mermaid.min.js"></script>
 			<script>mermaid.init({noteMargin: 10}, ".lang-mermaid");</script>
 			<?php if ($this->options->top == 'able'): ?>
-			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/fz6m/lamu-leimu-button@1.2/dist/lamu-leimu.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.5/js/lamu-leimu.min.js"></script>
 			<?php else: ?>
 			<?php endif; ?>
 			<script type="text/javascript" src='https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js'></script>

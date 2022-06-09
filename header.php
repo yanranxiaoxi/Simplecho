@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="x-dns-prefetch-control" content="on" />
 	<link rel="dns-prefetch" href="https://cdn.staticfile.org" />
-	<link rel="dns-prefetch" href="https://fastly.jsdelivr.net" />
+	<link rel="dns-prefetch" href="https://jsdelivr.cdn.soraharu.com" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>
 		<?php $this->archiveTitle(array(
@@ -18,35 +18,35 @@
 	<?php if ($this->options->favicon): ?>
 	<link href="<?php $this->options->favicon(); ?>" rel="shortcut icon" />
 	<?php else: ?>
-	<link href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/img/icon.ico" rel="shortcut icon" />
+	<link href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/img/icon.ico" rel="shortcut icon" />
 	<?php endif; ?>
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css" />
-	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/css/main.min.css" />
+	<link rel="stylesheet" href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/css/main.min.css" />
 	<?php if ($this->options->topnavO == '0'): ?>
-	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/css/gray.min.css" />
+	<link rel="stylesheet" href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/css/gray.min.css" />
 	<?php elseif ($this->options->topnavO == '1'): ?>
-	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/css/white.min.css" />
+	<link rel="stylesheet" href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/css/white.min.css" />
 	<?php elseif ($this->options->topnavO == '2'): ?>
-	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/css/black.min.css" />
+	<link rel="stylesheet" href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/css/black.min.css" />
 	<?php elseif ($this->options->topnavO == '3'): ?>
-	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/css/green.min.css" />
+	<link rel="stylesheet" href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/css/green.min.css" />
 	<?php else: ?>
-	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/css/gray.min.css" />
+	<link rel="stylesheet" href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/css/gray.min.css" />
 	<?php endif; ?>
 	<link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/4.5.3/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
-	<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/css/OwO.min.css" />
+	<link rel="stylesheet" href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/css/OwO.min.css" />
 
 	<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
 	<script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdn.staticfile.org/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script type="text/javascript" src="https://cdn.staticfile.org/bootstrap/4.5.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-	<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/js/jQuery.scrollLoad.min.js"></script>
+	<script type="text/javascript" src="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/js/jQuery.scrollLoad.min.js"></script>
 	<script type="text/javascript" src="https://cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
-	<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/js/OwO.min.js"></script>
-	<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/fz6m/console-ban@1.5/dist/console-ban.min.js"></script>
+	<script type="text/javascript" src="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/js/OwO.min.js"></script>
+	<script type="text/javascript" src="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/js/console-ban.min.js"></script>
 	<!--<script src="media/scripts/index.js"></script>-->
 	<!-- 通过自有函数输出HTML头部信息 -->
 </head>
@@ -59,7 +59,7 @@
 						<?php if ($this->options->logo): ?>
 						<img class="user-avatar" src="<?php $this->options->logo(); ?>" alt="头像" />
 						<?php else: ?>
-						<img class="user-avatar" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.6/img/avatar.png" alt="头像" />
+						<img class="user-avatar" src="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/img/avatar.png" alt="头像" />
 						<?php endif; ?>
 						<div class="site-name gt-c-content-color-first">
 							<?php $this->options->title(); ?>

@@ -4,6 +4,8 @@
 
 🔗 [GitLab (Homepage)](https://gitlab.soraharu.com/XiaoXi/Simplecho) | 🔗 [GitHub](https://github.com/yanranxiaoxi/Simplecho)
 
+[![jsDelivr](https://data.jsdelivr.com/v1/package/gh/yanranxiaoxi/Simplecho/badge)](https://www.jsdelivr.com/package/gh/yanranxiaoxi/Simplecho)
+
 ## ✨ 特性
 
 这是一款移植 `Gridea For Pure` 的 Typecho 主题，额外添加了许多不错的特性：

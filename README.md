@@ -4,7 +4,7 @@
 
 🔗 [GitLab (Homepage)](https://gitlab.soraharu.com/XiaoXi/Simplecho) | 🔗 [GitHub](https://github.com/yanranxiaoxi/Simplecho)
 
-[![jsDelivr](https://data.jsdelivr.com/v1/package/gh/yanranxiaoxi/Simplecho/badge)](https://www.jsdelivr.com/package/gh/yanranxiaoxi/Simplecho)
+[![jsDelivr](https://data.jsdelivr.com/v1/package/gh/yanranxiaoxi/Simplecho/badge?style=rounded)](https://www.jsdelivr.com/package/gh/yanranxiaoxi/Simplecho)
 
 ## ✨ 特性
 

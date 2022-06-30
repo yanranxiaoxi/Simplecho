@@ -95,18 +95,18 @@
 
 			<?php endif; ?>
 
-			<script type="text/javascript" src="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/js/img-lazy.min.js"></script>
-			<script type="text/javascript" src="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/js/moment.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/img-lazy.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/moment.min.js"></script>
 			<script type="text/javascript" src="https://cdn.staticfile.org/mermaid/9.1.1/mermaid.min.js"></script>
 			<script>mermaid.init({noteMargin: 10}, ".lang-mermaid");</script>
 			<?php if ($this->options->top == 'able'): ?>
-			<script type="text/javascript" src="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/js/lamu-leimu.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/lamu-leimu.min.js"></script>
 			<?php else: ?>
 			<?php endif; ?>
 			<script type="text/javascript" src='https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js'></script>
-			<link rel="stylesheet" href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/css/noticejs1.min.css" />
-			<link rel="stylesheet" href="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/css/animate.min.css" />
-			<script type="text/javascript" src="https://jsdelivr.cdn.soraharu.com/gh/yanranxiaoxi/Simplecho@0.1.7/js/notice.min.js"></script>
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/css/noticejs1.min.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/css/animate.min.css" />
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/notice.min.js"></script>
 			<script type="text/javascript">
 				new NoticeJs({
 					text: '页面加载完成~',

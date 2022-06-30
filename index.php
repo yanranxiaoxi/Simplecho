@@ -4,7 +4,7 @@
  * 
  * @package Simplecho
  * @author XiaoXi
- * @version 0.1.7
+ * @version 0.1.8
  * @link https://soraharu.com/
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

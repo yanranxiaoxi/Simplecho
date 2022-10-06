@@ -1,10 +1,10 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php
 /**
-	* 作品列表
-	*
-	* @package custom
-	*/
+ * 作品列表
+ *
+ * @package custom
+ */
 $this->need('header.php');
 ?>
 

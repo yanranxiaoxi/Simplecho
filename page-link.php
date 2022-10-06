@@ -1,10 +1,10 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php
 /**
-	* 友情链接
-	*
-	* @package custom
-	*/
+ * 友情链接
+ *
+ * @package custom
+ */
 $this->need('header.php');
 ?>
 

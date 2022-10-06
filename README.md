@@ -8,7 +8,7 @@
 
 ## ✨ 特性
 
-这是一款移植 `Gridea For Pure` 的 Typecho 主题，额外添加了许多不错的特性：
+这是一款由 [叶开](https://github.com/xiamuguizhi/typecho-for-Pure) 移植 `Gridea For Pure` 的 Typecho 主题，额外添加了许多不错的特性：
 
 - 支持自定义配色（纯白、灰白、青绿、暗夜）
 - 移动端页面适配

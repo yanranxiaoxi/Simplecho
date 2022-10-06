@@ -48,7 +48,7 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/OwO.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/console-ban.min.js"></script>
 	<!--<script src="media/scripts/index.js"></script>-->
-	<!-- 通过自有函数输出HTML头部信息 -->
+	<!-- 通过自有函数输出 HTML 头部信息 -->
 </head>
 <body>
 	<div class="main gt-bg-theme-color-first">

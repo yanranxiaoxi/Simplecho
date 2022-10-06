@@ -103,7 +103,7 @@
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/lamu-leimu.min.js"></script>
 			<?php else: ?>
 			<?php endif; ?>
-			<script type="text/javascript" src='https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js'></script>
+			<script type="text/javascript" src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js"></script>
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/css/noticejs1.min.css" />
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/css/animate.min.css" />
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/notice.min.js"></script>

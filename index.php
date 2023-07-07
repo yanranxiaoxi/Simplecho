@@ -4,10 +4,14 @@
  * 
  * @package Simplecho
  * @author XiaoXi
- * @version 0.1.8
+ * @version 0.1.9
  * @link https://soraharu.com/
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+
+/** 进行初始化设置 */
+$this->options->staticResourcesPrefix = $this->options->staticResourcesPrefix || 'https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.9/';
+
 $this->need('header.php');
 ?>
 

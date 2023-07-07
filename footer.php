@@ -72,8 +72,8 @@
 
 				</div>
 				<div class="footer-info">
-					<?php if ($this->options->ICPbeian): ?>
-					<p><a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"><?php $this->options->ICPbeian(); ?></a></p>
+					<?php if ($this->options->ICPBeiAn): ?>
+					<p><a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"><?php $this->options->ICPBeiAn(); ?></a></p>
 					<?php endif; ?>
 					<?php if ($this->options->footerContent): $this->options->footerContent(); ?>
 					<?php endif; ?>
@@ -95,18 +95,18 @@
 
 			<?php endif; ?>
 
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/img-lazy.min.js"></script>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/moment.min.js"></script>
+			<script type="text/javascript" src="<?php $this->options->staticResourcesPrefix(); ?>js/img-lazy.min.js"></script>
+			<script type="text/javascript" src="<?php $this->options->staticResourcesPrefix(); ?>js/moment.min.js"></script>
 			<script type="text/javascript" src="https://cdn.staticfile.org/mermaid/9.1.1/mermaid.min.js"></script>
 			<script>mermaid.init({noteMargin: 10}, ".lang-mermaid");</script>
 			<?php if ($this->options->top == 'able'): ?>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/lamu-leimu.min.js"></script>
+			<script type="text/javascript" src="<?php $this->options->staticResourcesPrefix(); ?>js/lamu-leimu.min.js"></script>
 			<?php else: ?>
 			<?php endif; ?>
 			<script type="text/javascript" src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js"></script>
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/css/noticejs1.min.css" />
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/css/animate.min.css" />
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/js/notice.min.js"></script>
+			<link rel="stylesheet" href="<?php $this->options->staticResourcesPrefix(); ?>css/noticejs1.min.css" />
+			<link rel="stylesheet" href="<?php $this->options->staticResourcesPrefix(); ?>css/animate.min.css" />
+			<script type="text/javascript" src="<?php $this->options->staticResourcesPrefix(); ?>js/notice.min.js"></script>
 			<script type="text/javascript">
 				new NoticeJs({
 					text: '页面加载完成~',

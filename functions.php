@@ -16,7 +16,7 @@ function themeConfig($form) {
 	$form->addInput($summary);
 	
 	//主题配色
-	$topnavO = new Typecho_Widget_Helper_Form_Element_Radio('topnavO',
+	$themeColor = new Typecho_Widget_Helper_Form_Element_Radio('themeColor',
 		array(
 			0 => _t('银光灰'),
 			1 => _t('简约白'),
@@ -24,7 +24,7 @@ function themeConfig($form) {
 			3 => _t('墨草绿')),
 			0, _t('网站主题配色'), _t('默认显示 银光灰 配色主题')
 		);
-	$form->addInput($topnavO);
+	$form->addInput($themeColor);
 
 	// 拉姆雷姆返回顶部
 	$top = new Typecho_Widget_Helper_Form_Element_Radio('top',
@@ -53,6 +53,10 @@ function themeConfig($form) {
 	// 百度收录自动推送接口调用地址
 	$baiduPushUrl = new Typecho_Widget_Helper_Form_Element_Text('baiduPushUrl', NULL, NULL, _t('百度收录自动推送接口调用地址'), _t('例如：http://data.zz.baidu.com/urls?site=https://blog.example.com&token=EvBAuXeD8MpQ5dVv'));
 	$form->addInput($baiduPushUrl);
+
+	// 静态资源 CDN 地址
+	$staticResourcesPrefix = new Typecho_Widget_Helper_Form_Element_Text('staticResourcesPrefix', NULL, NULL, _t('静态资源 CDN 地址'), _t('例如：https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.9/ 或 https://tech.soraharu.com/，你可以填写自己的域名以完全本地化使用'));
+	$form->addInput($staticResourcesPrefix);
 
 	// Gravatar 地址
 	$gravatarPrefix = new Typecho_Widget_Helper_Form_Element_Text('gravatarPrefix', NULL, NULL, _t('自定义 Gravatar 地址'), _t('例如：https://secure.gravatar.com/avatar/'));
@@ -107,8 +111,8 @@ function themeConfig($form) {
 	$form->addInput($socialEMailTo);
 
 	// ICP 备案号
-	$ICPbeian = new Typecho_Widget_Helper_Form_Element_Text('ICPbeian', NULL, NULL, _t('页底：ICP 备案号'), _t('输入 ICP 备案号，留空则不显示'));
-	$form->addInput($ICPbeian);
+	$ICPBeiAn = new Typecho_Widget_Helper_Form_Element_Text('ICPBeiAn', NULL, NULL, _t('页底：ICP 备案号'), _t('输入 ICP 备案号，留空则不显示'));
+	$form->addInput($ICPBeiAn);
 
 	// 底部自定义
 	$footerContent = new Typecho_Widget_Helper_Form_Element_Textarea('footerContent', NULL, NULL, _t('页底：自定义内容'), _t('位于底部 footer 内，适合放置一些 JS 内容，如网站统计、备案信息代码等'));
@@ -138,14 +142,14 @@ function printTag($that) { ?>
 		<?php endif; ?>
 <?php }
 
-// Typecho PHP 正则提取 img 标签 src 和 alt，评论新窗口打开 <a href="$1" data-title="$2" data-lightbox="roadtrip" /><img alt="$2" src="$1"></a>   
+// Typecho PHP 正则提取 img 标签 src 和 alt，评论新窗口打开
 function parseContent($obj) {
 	$options = Typecho_Widget::widget('Widget_Options');	
 		if (!empty($options->src_add) && !empty($options->cdn_add)) {
 			$obj->content = str_ireplace($options->src_add,$options->cdn_add,$obj->content);
 		}
 
-	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.8/img/lazyload.jpg" alt="$2" data-src="$1" />',$obj->content);
+	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="' + $this->options->staticResourcesPrefix + 'img/lazyload.jpg" alt="$2" data-src="$1" />',$obj->content);
 	$obj->content = preg_replace("/<a href=\"([^\"]*)\">/i", "<a href=\"\\1\" target=\"_blank\">", $obj->content);
 	echo trim($obj->content);
 }
@@ -609,7 +613,7 @@ class editor
 				});
 
 				// 更新附件数量显示
-				function updateAttacmentNumber() {
+				function updateAttachmentNumber() {
 					var btn = $('#tab-files-btn'),
 						balloon = $('.balloon', btn),
 						count = $('#file-list li .insert').length;
@@ -648,7 +652,7 @@ class editor
 
 					attachInsertEvent(li);
 					attachDeleteEvent(li);
-					updateAttacmentNumber();
+					updateAttachmentNumber();
 
 					if (!completeFile) {
 						completeFile = data;
@@ -678,7 +682,7 @@ class editor
 							function() {
 								$(el).fadeOut(function() {
 									$(this).remove();
-									updateAttacmentNumber();
+									updateAttachmentNumber();
 								});
 							});
 						}

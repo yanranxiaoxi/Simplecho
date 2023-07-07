@@ -8,7 +8,9 @@
 
 ## ✨ 特性
 
-这是一款由 [叶开](https://github.com/xiamuguizhi/typecho-for-Pure) 移植 `Gridea For Pure` 的 Typecho 主题，额外添加了许多不错的特性：
+这是一款 Typecho 主题，当前最新测试版本为 `Typecho 1.2.0`。
+
+本主题原先由 [叶开](https://github.com/xiamuguizhi/typecho-for-Pure) 移植于 `Gridea For Pure`，现额外添加了许多不错的新特性：
 
 - 支持自定义配色（纯白、灰白、青绿、暗夜）
 - 移动端页面适配
@@ -19,6 +21,7 @@
 - 百度收录自动推送
 - 自定义 Gravatar 地址
 - 丰富的页底社交帐号图标
+- 可配置静态资源 CDN 缓存
 
 示例站点：[小汐技术栈](https://tech.soraharu.com/)
 

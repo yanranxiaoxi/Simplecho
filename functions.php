@@ -55,7 +55,7 @@ function themeConfig($form) {
 	$form->addInput($baiduPushUrl);
 
 	// 静态资源 CDN 地址
-	$staticResourcesPrefix = new Typecho_Widget_Helper_Form_Element_Text('staticResourcesPrefix', NULL, 'https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/', _t('静态资源 CDN 地址'), _t('例如：https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/ 或 https://<your-domain.name>/usr/themes/Simplecho/js/，你可以将 <your-domain.name> 更改为自己的域名以完全本地化使用'));
+	$staticResourcesPrefix = new Typecho_Widget_Helper_Form_Element_Text('staticResourcesPrefix', NULL, 'https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/', _t('静态资源 CDN 地址'), _t('例如：https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/ 或 https://&lt;your-domain.name&gt;/usr/themes/Simplecho/js/，你可以将 &lt;your-domain.name&gt; 更改为自己的域名以完全本地化使用'));
 	$form->addInput($staticResourcesPrefix);
 
 	// Gravatar 地址

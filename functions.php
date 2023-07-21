@@ -3,7 +3,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form) {
 	
-	// favicon 图标
+	// Favicon 图标
 	$favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon 图标'), _t('输入图片 URL 地址，显示 favicon 图标，留空显示默认'));
 	$form->addInput($favicon);
 
@@ -55,11 +55,11 @@ function themeConfig($form) {
 	$form->addInput($baiduPushUrl);
 
 	// 静态资源 CDN 地址
-	$staticResourcesPrefix = new Typecho_Widget_Helper_Form_Element_Text('staticResourcesPrefix', NULL, NULL, _t('静态资源 CDN 地址'), _t('例如：https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.9/ 或 https://tech.soraharu.com/，你可以填写自己的域名以完全本地化使用'));
+	$staticResourcesPrefix = new Typecho_Widget_Helper_Form_Element_Text('staticResourcesPrefix', NULL, 'https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.10/', _t('静态资源 CDN 地址'), _t('例如：https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.10/ 或 https://<your-domain.name>/usr/themes/Simplecho/js/，你可以将 <your-domain.name> 更改为自己的域名以完全本地化使用'));
 	$form->addInput($staticResourcesPrefix);
 
 	// Gravatar 地址
-	$gravatarPrefix = new Typecho_Widget_Helper_Form_Element_Text('gravatarPrefix', NULL, NULL, _t('自定义 Gravatar 地址'), _t('例如：https://secure.gravatar.com/avatar/'));
+	$gravatarPrefix = new Typecho_Widget_Helper_Form_Element_Text('gravatarPrefix', NULL, 'https://gravatar.soraharu.com/avatar/', _t('自定义 Gravatar 地址'), _t('例如：https://secure.gravatar.com/avatar/'));
 	$form->addInput($gravatarPrefix);
 
 	// 手动置顶文章
@@ -91,11 +91,11 @@ function themeConfig($form) {
 	$form->addInput($socialYouTube);
 
 	// GitHub
-	$socialGitHub = new Typecho_Widget_Helper_Form_Element_Text('socialGitHub', NULL, NULL, _t('页底：GitHub'), _t('GitHub 用户页地址'));
+	$socialGitHub = new Typecho_Widget_Helper_Form_Element_Text('socialGitHub', NULL, 'https://github.com/yanranxiaoxi/Simplecho', _t('页底：GitHub'), _t('GitHub 用户页地址'));
 	$form->addInput($socialGitHub);
 
 	// GitLab
-	$socialGitLab = new Typecho_Widget_Helper_Form_Element_Text('socialGitLab', NULL, NULL, _t('页底：GitLab'), _t('GitLab 用户页地址'));
+	$socialGitLab = new Typecho_Widget_Helper_Form_Element_Text('socialGitLab', NULL, 'https://gitlab.soraharu.com/XiaoXi/Simplecho', _t('页底：GitLab'), _t('GitLab 用户页地址'));
 	$form->addInput($socialGitLab);
 
 	// LinkedIn

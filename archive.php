@@ -41,7 +41,7 @@
 				</div>
 			</div>
 
-			<?php if (yotu($this) == 1): ?>
+			<?php if (hasImage($this) == 1): ?>
 			<a href="<?php $this->permalink(); ?>" class="post-feature-image"
 				style="background-image: url('<?php showThumbnail($this); ?>')">
 			</a>

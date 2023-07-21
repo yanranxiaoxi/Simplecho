@@ -155,7 +155,7 @@ function parseContent($obj) {
 }
 
 // 判断是否存在图片，再根据结果切换不同的样式
-function yotu($thiz) {
+function hasImage($thiz) {
 	$content = $thiz->content;
 	$ret = preg_match("/\<img.*?src\=\"(.*?)\"[^>]*>/i", $content, $thumbUrl);
 	if ($ret === 1 && count($thumbUrl) == 2) {

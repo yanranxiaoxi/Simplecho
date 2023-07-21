@@ -55,7 +55,7 @@ function themeConfig($form) {
 	$form->addInput($baiduPushUrl);
 
 	// 静态资源 CDN 地址
-	$staticResourcesPrefix = new Typecho_Widget_Helper_Form_Element_Text('staticResourcesPrefix', NULL, 'https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.10/', _t('静态资源 CDN 地址'), _t('例如：https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.10/ 或 https://<your-domain.name>/usr/themes/Simplecho/js/，你可以将 <your-domain.name> 更改为自己的域名以完全本地化使用'));
+	$staticResourcesPrefix = new Typecho_Widget_Helper_Form_Element_Text('staticResourcesPrefix', NULL, 'https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/', _t('静态资源 CDN 地址'), _t('例如：https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/ 或 https://<your-domain.name>/usr/themes/Simplecho/js/，你可以将 <your-domain.name> 更改为自己的域名以完全本地化使用'));
 	$form->addInput($staticResourcesPrefix);
 
 	// Gravatar 地址
@@ -144,12 +144,12 @@ function printTag($that) { ?>
 
 // Typecho PHP 正则提取 img 标签 src 和 alt，评论新窗口打开
 function parseContent($obj) {
-	$options = Typecho_Widget::widget('Widget_Options');	
-		if (!empty($options->src_add) && !empty($options->cdn_add)) {
-			$obj->content = str_ireplace($options->src_add,$options->cdn_add,$obj->content);
-		}
+	$widgetOptions = Typecho_Widget::widget('Widget_Options');
+	if (!empty($widgetOptions->src_add) && !empty($widgetOptions->cdn_add)) {
+		$obj->content = str_ireplace($widgetOptions->src_add,$widgetOptions->cdn_add,$obj->content);
+	}
 
-	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="' + $this->options->staticResourcesPrefix + 'img/lazyload.jpg" alt="$2" data-src="$1" />',$obj->content);
+	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/img/lazyload.jpg" alt="$2" data-src="$1" />', $obj->content);
 	$obj->content = preg_replace("/<a href=\"([^\"]*)\">/i", "<a href=\"\\1\" target=\"_blank\">", $obj->content);
 	echo trim($obj->content);
 }

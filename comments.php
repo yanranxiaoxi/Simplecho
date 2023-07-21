@@ -69,7 +69,7 @@
 	</div>
 	<div class="comment-content">
 		<b><?php get_comment_at($comments->coid); ?></b>
-		<?php echo preg_replace('#\@\((.*?)\)#', '<img src="' + $this->options->staticResourcesPrefix + 'img/alu/$1.png">', $comments->content); // 替换关键词为表情 ?>
+		<?php echo preg_replace('#\@\((.*?)\)#', '<img src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/img/alu/$1.png">', $comments->content); // 替换关键词为表情 ?>
 	</div>
 	<?php if ($comments->children) { ?>
 	<div class="comment-children" id="pllc">
@@ -129,7 +129,7 @@
 		<?php if ($this->options->baiduPush == 'able' && !empty($this->options->baiduPushUrl)): ?>
 		<?php
 		$cxurl = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		function okBaidu($url) {
+		function okBaidu($url, $baiduPushUrl) {
 			$url = 'https://www.baidu.com/s?wd=' . $url;
 			$curl = curl_init();
 			curl_setopt($curl, CURLOPT_URL, $url);
@@ -144,7 +144,7 @@
 				$urls = array(
 					$pageURL
 				);
-				$api = $this->options->baiduPushUrl;
+				$api = $baiduPushUrl;
 				$ch = curl_init();
 				$options = array(
 					CURLOPT_URL => $api,
@@ -163,7 +163,7 @@
 				echo "文章状态：未收录，已推送~ 【今日剩余额度：$ed 条】";
 			}
 		}
-		echo okBaidu($cxurl);
+		echo okBaidu($cxurl, $this->options->baiduPushUrl);
 		?>
 		<?php else: ?>
 		<?php endif; ?>

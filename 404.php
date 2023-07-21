@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cmn-Hans">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -66,7 +66,7 @@
 	<div class="box">
 		<div class="number">4 0 4</div>
 		<div class="text">
-			Page not found
+			Page Not Found
 		</div>
 		<div class="btn-container">
 			<a class="btn" id="back">

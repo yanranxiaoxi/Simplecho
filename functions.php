@@ -27,16 +27,16 @@ function themeConfig($form) {
 	$form->addInput($themeColor);
 
 	// 拉姆雷姆返回顶部
-	$top = new Typecho_Widget_Helper_Form_Element_Radio('top',
-		array('able' => _t('启用'),
+	$returnTop = new Typecho_Widget_Helper_Form_Element_Radio('returnTop',
+		array('enable' => _t('启用'),
 			'disable' => _t('禁用'),
 		),
 		'disable', _t('返回顶部'), _t('默认禁止，样式为 拉姆雷姆'));
-	$form->addInput($top);
+	$form->addInput($returnTop);
 
 	// 禁止开启控制台
 	$consolePanelBan = new Typecho_Widget_Helper_Form_Element_Radio('consolePanelBan',
-		array('able' => _t('启用'),
+		array('enable' => _t('启用'),
 			'disable' => _t('禁用'),
 		),
 		'disable', _t('禁止开启控制台'), _t('禁止 F12 / 审查开启控制台（其实大部分情况下没有用）'));
@@ -44,7 +44,7 @@ function themeConfig($form) {
 
 	// 百度收录自动推送
 	$baiduPush = new Typecho_Widget_Helper_Form_Element_Radio('baiduPush',
-		array('able' => _t('启用'),
+		array('enable' => _t('启用'),
 			'disable' => _t('禁用'),
 		),
 		'disable', _t('百度收录自动推送'), _t('接口调用地址需前往 <a href="https://ziyuan.baidu.com/linksubmit/index?site=" target="_blank">百度搜索资源平台</a> 申请，请在下方填写地址后再启用，否则将卡死'));
@@ -110,6 +110,22 @@ function themeConfig($form) {
 	$ICPBeiAn = new Typecho_Widget_Helper_Form_Element_Text('ICPBeiAn', NULL, NULL, _t('页底：ICP 备案号'), _t('输入 ICP 备案号，留空则不显示'));
 	$form->addInput($ICPBeiAn);
 
+	// Umami
+	$umamiUrl = new Typecho_Widget_Helper_Form_Element_Text('umamiUrl', NULL, NULL, _t('Umami 跟踪脚本'), _t('输入 Umami 跟踪脚本地址，留空则不使用 Umami'));
+	$form->addInput($umamiUrl);
+
+	// Umami
+	$umamiId = new Typecho_Widget_Helper_Form_Element_Text('umamiId', NULL, NULL, _t('Umami Data-Website-ID'), _t('输入 Umami 站点 ID，留空则不使用 Umami'));
+	$form->addInput($umamiId);
+
+	// Umami
+	$umamiDoNotTrack = new Typecho_Widget_Helper_Form_Element_Radio('umamiDoNotTrack',
+		array('true' => _t('是'),
+			'false' => _t('否'),
+		),
+		'disable', _t('Umami 请勿跟踪'), _t('Umami 是否响应请勿跟踪请求'));
+	$form->addInput($umamiDoNotTrack);
+
 	// 底部自定义
 	$footerContent = new Typecho_Widget_Helper_Form_Element_Textarea('footerContent', NULL, NULL, _t('页底：自定义内容'), _t('位于底部 footer 内，适合放置一些 JS 内容，如网站统计、备案信息代码等'));
 	$form->addInput($footerContent);
@@ -145,7 +161,7 @@ function parseContent($obj) {
 		$obj->content = str_ireplace($widgetOptions->src_add,$widgetOptions->cdn_add,$obj->content);
 	}
 
-	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/images/lazyload.jpg" alt="$2" data-src="$1" />', $obj->content);
+	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.13/images/lazyload.jpg" alt="$2" data-src="$1" />', $obj->content);
 	$obj->content = preg_replace("/<a href=\"([^\"]*)\">/i", "<a href=\"\\1\" target=\"_blank\">", $obj->content);
 	echo trim($obj->content);
 }

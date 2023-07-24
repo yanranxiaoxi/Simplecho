@@ -69,7 +69,7 @@
 	</div>
 	<div class="comment-content">
 		<b><?php get_comment_at($comments->coid); ?></b>
-		<?php echo preg_replace('#\@\((.*?)\)#', '<img src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/images/alu/$1.png">', $comments->content); // 替换关键词为表情 ?>
+		<?php echo preg_replace('#\@\((.*?)\)#', '<img src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.13/images/alu/$1.png">', $comments->content); // 替换关键词为表情 ?>
 	</div>
 	<?php if ($comments->children) { ?>
 	<div class="comment-children" id="pllc">
@@ -125,7 +125,7 @@
 			<path d="M656.26112 347.20768a188.65152 188.65152 0 1 0 0 324.04992V347.20768z" fill="#F4CA1C"></path>
 			<path d="M668.34944 118.88128a73.34912 73.34912 0 0 0-71.168-4.06016L287.17056 263.5008a4.608 4.608 0 0 1-2.01216 0.4608H130.048A73.728 73.728 0 0 0 56.32 337.59744v349.63968a73.728 73.728 0 0 0 73.728 73.63584h156.55424a4.67968 4.67968 0 0 1 1.94048 0.43008l309.59104 143.19616a73.7024 73.7024 0 0 0 104.66816-66.82112V181.20704a73.216 73.216 0 0 0-34.45248-62.32576zM125.40416 687.23712V337.59744a4.608 4.608 0 0 1 4.608-4.608h122.0352v358.88128H130.048a4.608 4.608 0 0 1-4.64384-4.6336z m508.31872 150.44096a4.608 4.608 0 0 1-6.56384 4.19328l-306.02752-141.55264V323.77344l305.9712-146.72384a4.608 4.608 0 0 1 6.62016 4.15744v656.47104z m304.5376-358.95808h-150.25152a34.5088 34.5088 0 1 0 0 69.0176h150.25152a34.5088 34.5088 0 1 0 0-69.0176z m-128.25088-117.76a34.44736 34.44736 0 0 0 24.41728-10.10176L940.672 244.736a34.52416 34.52416 0 0 0-48.83968-48.80896L785.5872 302.08a34.5088 34.5088 0 0 0 24.4224 58.88z m24.41728 314.60864a34.52416 34.52416 0 1 0-48.83968 48.81408l106.24512 106.1376a34.52416 34.52416 0 0 0 48.83968-48.80896z" fill="#595BB3"></path>
 		</svg>
-		<?php if ($this->options->baiduPush == 'able' && !empty($this->options->baiduPushUrl)): ?>
+		<?php if ($this->options->baiduPush === 'enable' && !empty($this->options->baiduPushUrl)): ?>
 		<?php
 		$cxurl = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		function okBaidu($url, $baiduPushUrl) {
@@ -174,7 +174,7 @@
 		logo: 'OωO表情',
 		container: document.getElementsByClassName('OwO')[0],
 		target: document.getElementsByClassName('OwO-textarea')[0],
-		api: 'https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/json/OwO.json',
+		api: 'https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.13/assets/json/OwO.json',
 		position: 'down',
 		width: '100%',
 		maxHeight: '250px'
@@ -222,7 +222,7 @@ el=$('#comment-'+comment.parent).find('.comment-children').find('.comment-list')
 if(0==el.length)
 {$('<ol class="comment-list"></ol>').prependTo($('#comments'));el=$('#comments > .comment-list');}
 var html='<li id="comment-{coid}" class="comment-body comment-ajax comment-parent comment-odd"> <div class="comment-author"> <img class="avatar" src="{avatar}" alt="{author}" width="32" height="32"> <div class="comment-info"> <cite class="fn"><a href="{url}" rel="external nofollow" target="_blank">{author}</a></cite>  <em class="comment-meta"><a href="{permalink}">{datetime}</a></em> </div> <div class="comment-reply"><a href="{permalink}" rel="nofollow" onclick="return TypechoComment.reply(\'\comment-{coid}\'\, {coid});">回复</a></div> </div> <div class="comment-content">{content}</div> </li>';$.each(comment,function(k,v)
-{regExp=new RegExp('{'+k+'}','g');html=html.replace(regExp,v);});var reg1=/@\(([^ ]*)\)/g;html=html.replace(reg1,"<img src=\"https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/images/alu/$1.png\"\>");$(html).prependTo(el);}
+{regExp=new RegExp('{'+k+'}','g');html=html.replace(regExp,v);});var reg1=/@\(([^ ]*)\)/g;html=html.replace(reg1,"<img src=\"https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.13/images/alu/$1.png\"\>");$(html).prependTo(el);}
 $.ajax({url:'<?php $this->permalink();?>',type:'POST',data:params,dataType:'json',beforeSend:function()
 {$(".loading").css("display","block");},complete:function()
 {$(".loading").css("display","none");new NoticeJs({text:'评论成功（//▽//）',position:'middleCenter',animation:{open:'animated bounceInRight',close:'animated bounceOutLeft'}}).show();},success:function(result)

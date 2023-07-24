@@ -82,7 +82,7 @@
 					Theme by <a href="https://soraharu.com/" target="_blank">XiaoXi</a> | Powered by <a href="https://typecho.org/" target="_blank">Typecho</a> | <a href="<?php $this->options->feedUrl(); ?>" target="_blank">RSS</a>
 				</div>
 			</div>
-			<?php if ($this->options->consolePanelBan == 'able'): ?>
+			<?php if ($this->options->consolePanelBan === 'enable'): ?>
 			<script>
 				// default options
 				ConsoleBan.init()
@@ -91,22 +91,16 @@
 					redirect: '<?php $this->options->themeUrl("console.html"); ?>'
 				})
 			</script>
-			<?php else: ?>
-
 			<?php endif; ?>
 
-			<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/js/img-lazy.min.js"></script>
-			<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/js/moment.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.13/assets/js/img-lazy.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.13/assets/js/moment.min.js"></script>
 			<script type="text/javascript" src="https://cdn.staticfile.org/mermaid/10.2.4/mermaid.min.js"></script>
 			<script>mermaid.init({noteMargin: 10}, ".lang-mermaid");</script>
-			<?php if ($this->options->top == 'able'): ?>
-			<script async type="text/javascript" src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/js/lamu-leimu.min.js"></script>
-			<?php else: ?>
-			<?php endif; ?>
 			<script type="text/javascript" src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js"></script>
-			<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/css/noticejs.min.css" />
+			<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.13/assets/css/noticejs.min.css" />
 			<link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/3.5.2/animate.min.css" />
-			<script type="text/javascript" src="https://gcore.jsdelivr.net/npm/notice.js@0.4.0/dist/notice.min.js"></script>
+			<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/notice.js@0.4.0/dist/notice.min.js"></script>
 			<script type="text/javascript">
 				new NoticeJs({
 					text: '页面加载完成~',
@@ -117,6 +111,12 @@
 					}
 				}).show();
 			</script>
+			<?php if (!empty($this->options->umamiUrl) && !empty($this->options->umamiId)): ?>
+			<script async src="<?php $this->options->umamiUrl(); ?>" data-website-id="<?php $this->options->umamiId(); ?>" data-do-not-track="<?php $this->options->umamiDoNotTrack(); ?>"></script>
+			<?php endif; ?>
+			<?php if ($this->options->returnTop === 'enable'): ?>
+			<script defer type="text/javascript" src="https://fastly.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.13/assets/js/lamu-leimu.min.js"></script>
+			<?php endif; ?>
 		</div>
 	</div>
 	<?php $this->footer(); ?>

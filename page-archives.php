@@ -2,8 +2,6 @@
 <?php
 /**
  * 归档
- *
- * @package custom
  */
 $this->need('header.php');
 ?>

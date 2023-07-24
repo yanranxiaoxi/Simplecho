@@ -2,8 +2,6 @@
 <?php
 /**
  * 友情链接
- *
- * @package custom
  */
 $this->need('header.php');
 ?>

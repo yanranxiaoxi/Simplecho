@@ -1,7 +1,7 @@
 function getBaseUrl() {
-	var ishttps = 'https:' == document.location.protocol ? true : false;
+	var isHttps = 'https:' == document.location.protocol ? true : false;
 	var url = window.location.host;
-	if (ishttps) {
+	if (isHttps) {
 		url = 'https://' + url;
 	} else {
 		url = 'http://' + url;
@@ -20,10 +20,10 @@ $(document)
 		fragment: '#pjax',
 		timeout: 8000
 	})
-// 支持表单提交事件无刷新
+// 支持表单无刷新提交事件
 $(document)
 	.on('submit', '#gridea-search-form', function(event) {
-		// 这是提交表单的 pjax。form 表示所有的提交表单都会执行 pjax，比如搜索和提交评论，可自行修改改成你想要执行 pjax 的 form id 或 class。#container 同上改成你主题的内容主体 id 或 class。
+		// 这是提交表单。所有的提交表单都会执行 pjax，比如搜索和提交评论，可自行修改成你想要执行 pjax 的 form id 或 class，#container 改成你主题的内容主体 id 或 class
 		$.pjax.submit(event, '#pjax', {
 			fragment: '#pjax',
 			timeout: 6000

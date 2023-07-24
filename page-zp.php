@@ -2,8 +2,6 @@
 <?php
 /**
  * 作品列表
- *
- * @package custom
  */
 $this->need('header.php');
 ?>

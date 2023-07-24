@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html lang="zh-Hans-CN">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="x-dns-prefetch-control" content="on" />
@@ -18,37 +18,35 @@
 	<?php if ($this->options->favicon): ?>
 	<link href="<?php $this->options->favicon(); ?>" rel="shortcut icon" />
 	<?php else: ?>
-	<link href="<?php $this->options->staticResourcesPrefix(); ?>img/icon.ico" rel="shortcut icon" />
+	<link href="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/images/icon.ico" rel="shortcut icon" />
 	<?php endif; ?>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css" />
-	<link rel="stylesheet" href="<?php $this->options->staticResourcesPrefix(); ?>css/main.min.css" />
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+	<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/css/main.min.css" />
 	<?php if ($this->options->themeColor == '0'): ?>
-	<link rel="stylesheet" href="<?php $this->options->staticResourcesPrefix(); ?>css/gray.min.css" />
+	<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/css/gray.min.css" />
 	<?php elseif ($this->options->themeColor == '1'): ?>
-	<link rel="stylesheet" href="<?php $this->options->staticResourcesPrefix(); ?>css/white.min.css" />
+	<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/css/white.min.css" />
 	<?php elseif ($this->options->themeColor == '2'): ?>
-	<link rel="stylesheet" href="<?php $this->options->staticResourcesPrefix(); ?>css/black.min.css" />
+	<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/css/black.min.css" />
 	<?php elseif ($this->options->themeColor == '3'): ?>
-	<link rel="stylesheet" href="<?php $this->options->staticResourcesPrefix(); ?>css/green.min.css" />
+	<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/css/green.min.css" />
 	<?php else: ?>
-	<link rel="stylesheet" href="<?php $this->options->staticResourcesPrefix(); ?>css/gray.min.css" />
+	<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/css/gray.min.css" />
 	<?php endif; ?>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/4.5.3/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/4.6.2/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
-	<link rel="stylesheet" href="<?php $this->options->staticResourcesPrefix(); ?>css/OwO.min.css" />
+	<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.css" />
 
-	<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
-	<script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdn.staticfile.org/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script type="text/javascript" src="https://cdn.staticfile.org/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+	<script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.staticfile.org/popper.js/1.16.1/umd/popper.min.js"></script>
+	<script type="text/javascript" src="https://cdn.staticfile.org/bootstrap/4.6.2/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-	<script type="text/javascript" src="<?php $this->options->staticResourcesPrefix(); ?>js/jQuery.scrollLoad.min.js"></script>
+	<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/assets/js/jQuery.scrollLoad.min.js"></script>
 	<script type="text/javascript" src="https://cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
-	<script type="text/javascript" src="<?php $this->options->staticResourcesPrefix(); ?>js/OwO.min.js"></script>
-	<script type="text/javascript" src="<?php $this->options->staticResourcesPrefix(); ?>js/console-ban.min.js"></script>
-	<!--<script src="media/scripts/index.js"></script>-->
-	<!-- 通过自有函数输出 HTML 头部信息 -->
+	<script type="text/javascript" src="https://gcore.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.js"></script>
+	<script type="text/javascript" src="https://gcore.jsdelivr.net/npm/console-ban@5.0.0/dist/console-ban.min.js"></script>
 </head>
 <body>
 	<div class="main gt-bg-theme-color-first">
@@ -59,7 +57,7 @@
 						<?php if ($this->options->logo): ?>
 						<img class="user-avatar" src="<?php $this->options->logo(); ?>" alt="头像" />
 						<?php else: ?>
-						<img class="user-avatar" src="<?php $this->options->staticResourcesPrefix(); ?>img/avatar.png" alt="头像" />
+						<img class="user-avatar" src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/images/avatar.png" alt="头像" />
 						<?php endif; ?>
 						<div class="site-name gt-c-content-color-first">
 							<?php $this->options->title(); ?>

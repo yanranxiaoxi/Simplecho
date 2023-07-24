@@ -54,10 +54,6 @@ function themeConfig($form) {
 	$baiduPushUrl = new Typecho_Widget_Helper_Form_Element_Text('baiduPushUrl', NULL, NULL, _t('百度收录自动推送接口调用地址'), _t('例如：http://data.zz.baidu.com/urls?site=https://blog.example.com&token=EvBAuXeD8MpQ5dVv'));
 	$form->addInput($baiduPushUrl);
 
-	// 静态资源 CDN 地址
-	$staticResourcesPrefix = new Typecho_Widget_Helper_Form_Element_Text('staticResourcesPrefix', NULL, 'https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/', _t('静态资源 CDN 地址'), _t('例如：https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/ 或 https://&lt;your-domain.name&gt;/usr/themes/Simplecho/js/，你可以将 &lt;your-domain.name&gt; 更改为自己的域名以完全本地化使用'));
-	$form->addInput($staticResourcesPrefix);
-
 	// Gravatar 地址
 	$gravatarPrefix = new Typecho_Widget_Helper_Form_Element_Text('gravatarPrefix', NULL, 'https://gravatar.soraharu.com/avatar/', _t('自定义 Gravatar 地址'), _t('例如：https://secure.gravatar.com/avatar/'));
 	$form->addInput($gravatarPrefix);
@@ -149,7 +145,7 @@ function parseContent($obj) {
 		$obj->content = str_ireplace($widgetOptions->src_add,$widgetOptions->cdn_add,$obj->content);
 	}
 
-	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.11/img/lazyload.jpg" alt="$2" data-src="$1" />', $obj->content);
+	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://gcore.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.12/images/lazyload.jpg" alt="$2" data-src="$1" />', $obj->content);
 	$obj->content = preg_replace("/<a href=\"([^\"]*)\">/i", "<a href=\"\\1\" target=\"_blank\">", $obj->content);
 	echo trim($obj->content);
 }

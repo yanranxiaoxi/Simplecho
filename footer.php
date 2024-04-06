@@ -10,6 +10,13 @@
 					</a>
 					<?php endif; ?>
 
+					<?php if ($this->options->socialMastodon): ?>
+					<!-- Mastodon rel="me" 属性用于验证域名身份 -->
+					<a rel="me" href="<?php $this->options->socialMastodon(); ?>" target="_blank">
+						<i class="fab fa-mastodon gt-c-content-color-first"></i>
+					</a>
+					<?php endif; ?>
+
 					<?php if ($this->options->socialTwitter): ?>
 					<a href="<?php $this->options->socialTwitter(); ?>" target="_blank">
 						<i class="fab fa-twitter gt-c-content-color-first"></i>

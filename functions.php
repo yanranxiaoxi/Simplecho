@@ -59,8 +59,12 @@ function themeConfig($form) {
 	$form->addInput($gravatarPrefix);
 
 	// 手动置顶文章
-	$sticky = new Typecho_Widget_Helper_Form_Element_Textarea('sticky', NULL, NULL, _t('手动置顶文章'), _t('复制首页文章要置顶的代码到这里，就是这么简单 :)'));
+	$sticky = new Typecho_Widget_Helper_Form_Element_Textarea('sticky', NULL, NULL, _t('手动置顶文章'), _t('复制要置顶的首页文章代码到这里，就是这么简单 :)'));
 	$form->addInput($sticky);
+
+	// 文章内容底部自定义
+	$underPostContent = new Typecho_Widget_Helper_Form_Element_Textarea('sticky', NULL, NULL, _t('文章内容底部自定义 HTML'), _t('在文章的底部显示自定义内容，例如版权声明或广告'));
+	$form->addInput($underPostContent);
 
 	// 个人主页
 	$socialHomepage = new Typecho_Widget_Helper_Form_Element_Text('socialHomepage', NULL, NULL, _t('页底：个人主页'), _t('个人主页地址'));

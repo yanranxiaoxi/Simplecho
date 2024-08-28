@@ -19,7 +19,7 @@
 
 					<?php if ($this->options->socialTwitter): ?>
 					<a href="<?php $this->options->socialTwitter(); ?>" target="_blank">
-						<i class="fab fa-twitter gt-c-content-color-first"></i>
+						<i class="fab fa-x-twitter gt-c-content-color-first"></i>
 					</a>
 					<?php endif; ?>
 

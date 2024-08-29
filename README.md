@@ -8,7 +8,7 @@
 
 ## ✨ 特性
 
-这是一款 Typecho 主题，当前最新测试版本为 `Typecho 1.2.1`。
+这是一款 Typecho 主题，当前最新测试版本为 `Typecho v1.3.0-alpha`。
 
 本主题原先由 [叶开](https://github.com/xiamuguizhi/typecho-for-Pure) 移植于 `Gridea For Pure`，现额外添加了许多不错的新特性：
 

@@ -188,7 +188,7 @@ function parseContent($obj) {
 		$obj->content = str_ireplace($widgetOptions->src_add,$widgetOptions->cdn_add,$obj->content);
 	}
 
-	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.17/images/lazyload.jpg" alt="$2" data-src="$1" />', $obj->content);
+	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.18/images/lazyload.jpg" alt="$2" data-src="$1" />', $obj->content);
 	$obj->content = preg_replace("/<a href=\"([^\"]*)\">/i", "<a href=\"\\1\" target=\"_blank\">", $obj->content);
 	echo trim($obj->content);
 }

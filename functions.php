@@ -74,8 +74,8 @@ function themeConfig($form) {
 	$socialMastodon = new Typecho_Widget_Helper_Form_Element_Text('socialMastodon', NULL, NULL, _t('页底：Mastodon'), _t('Mastodon 用户页地址'));
 	$form->addInput($socialMastodon);
 
-	// Twitter
-	$socialTwitter = new Typecho_Widget_Helper_Form_Element_Text('socialTwitter', NULL, NULL, _t('页底：Twitter'), _t('Twitter 用户页地址'));
+	// Twitter / X
+	$socialTwitter = new Typecho_Widget_Helper_Form_Element_Text('socialTwitter', NULL, NULL, _t('页底：X'), _t('X 用户页地址（aka: Twitter）'));
 	$form->addInput($socialTwitter);
 
 	// Facebook

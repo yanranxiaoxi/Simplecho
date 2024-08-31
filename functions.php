@@ -63,7 +63,7 @@ function themeConfig($form) {
 	$form->addInput($sticky);
 
 	// 文章内容底部自定义
-	$underPostContent = new Typecho_Widget_Helper_Form_Element_Textarea('sticky', NULL, NULL, _t('文章内容底部自定义 HTML'), _t('在文章的底部显示自定义内容，例如版权声明或广告'));
+	$underPostContent = new Typecho_Widget_Helper_Form_Element_Textarea('underPostContent', NULL, NULL, _t('文章内容底部自定义 HTML'), _t('在文章的底部显示自定义内容，例如版权声明或广告'));
 	$form->addInput($underPostContent);
 
 	// 个人主页

@@ -27,10 +27,7 @@
 				<?php parseContent($this); ?>
 			</div>
 
-			<?php if (!empty($this->underPostContent)): ?>
-				<br />
-				<?php $this->options->underPostContent(); ?>
-			<?php endif; ?>
+			<?php ($this->options->underPostContent) ? $this->options->underPostContent() : '';?>
 		</article>
 	</div>
 

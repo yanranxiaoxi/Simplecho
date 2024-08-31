@@ -27,7 +27,12 @@
 				<?php parseContent($this); ?>
 			</div>
 
-			<?php ($this->options->underPostContent) ? $this->options->underPostContent() : '';?>
+			<?php
+				if ($this->options->underPostContent) {
+					echo '<br />';
+					$this->options->underPostContent();
+				}
+			?>
 		</article>
 	</div>
 

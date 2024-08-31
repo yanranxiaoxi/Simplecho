@@ -399,19 +399,19 @@ function get_comment_at($coid) {
 		@$author = @$arow['author']; // 作者名称
 		if (@$author && $arow['status'] == "approved") { // 父评论作者存在且父评论已经审核通过
 			if (@$prow['status'] == "waiting") {
-				echo '<p class="commentReview">' . _mt("（评论审核中）") . '</p>';
+				echo '<p class="commentReview">（评论审核中）</p>';
 			}
 			echo '<a href="#comment-' . $parent . '">@' . $author . '</a>';
 		} else { // 父评论作者不存在或者父评论没有审核通过
 			if (@$prow['status'] == "waiting") {
-				echo '<p class="commentReview">' . _mt("（评论审核中）") . '</p>';
+				echo '<p class="commentReview">（评论审核中）</p>';
 			} else {
 				echo '';
 			}
 		}
 	} else { // 母评论，无需输出锚点链接
 		if (@$prow['status'] == "waiting"){
-			echo '<p class="commentReview">' . _mt("（评论审核中）") . '</p>';
+			echo '<p class="commentReview">（评论审核中）</p>';
 		} else {
 			echo '';
 		}

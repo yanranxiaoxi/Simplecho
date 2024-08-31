@@ -15,39 +15,56 @@ function themeConfig($form) {
 	$summary = new Typecho_Widget_Helper_Form_Element_Text('summary', NULL, NULL, _t('首页网站描述'), _t('输入一段描述，将会显示在网站 title 后方'));
 	$form->addInput($summary);
 	
-	//主题配色
+	// 主题配色
 	$themeColor = new Typecho_Widget_Helper_Form_Element_Radio('themeColor',
 		array(
 			0 => _t('银光灰'),
 			1 => _t('简约白'),
 			2 => _t('暗夜黑'),
-			3 => _t('墨草绿')),
-			0, _t('网站主题配色'), _t('默认显示 银光灰 配色主题')
-		);
+			3 => _t('墨草绿'),
+		),
+		0, _t('网站主题配色'), _t('默认显示 银光灰 配色主题')
+	);
 	$form->addInput($themeColor);
+
+	// 自动跟随浏览器夜间模式
+	$themeAutoDark = new Typecho_Widget_Helper_Form_Element_Radio('themeAutoDark',
+		array(
+			'enable' => _t('启用'),
+			'disable' => _t('禁用'),
+		),
+		'disable', _t('自动跟随浏览器夜间模式'), _t('如果浏览器为夜间模式，则自动切换主题到 暗夜黑')
+	);
+	$form->addInput($themeAutoDark);
 
 	// 拉姆雷姆返回顶部
 	$returnTop = new Typecho_Widget_Helper_Form_Element_Radio('returnTop',
-		array('enable' => _t('启用'),
+		array(
+			'enable' => _t('启用'),
 			'disable' => _t('禁用'),
 		),
-		'disable', _t('返回顶部'), _t('默认禁止，样式为 拉姆雷姆'));
+		'disable', _t('返回顶部'), _t('默认禁止，样式为 拉姆雷姆')
+	);
 	$form->addInput($returnTop);
 
 	// 禁止开启控制台
 	$consolePanelBan = new Typecho_Widget_Helper_Form_Element_Radio('consolePanelBan',
-		array('enable' => _t('启用'),
+		array(
+			'enable' => _t('启用'),
 			'disable' => _t('禁用'),
 		),
-		'disable', _t('禁止开启控制台'), _t('禁止 F12 / 审查开启控制台（其实大部分情况下没有用）'));
+		'disable', _t('禁止开启控制台'), _t('禁止 F12 / 审查开启控制台（其实大部分情况下没有用）')
+	);
 	$form->addInput($consolePanelBan);
 
 	// 百度收录自动推送
 	$baiduPush = new Typecho_Widget_Helper_Form_Element_Radio('baiduPush',
-		array('enable' => _t('启用'),
+		array(
+			'enable' => _t('启用'),
 			'disable' => _t('禁用'),
 		),
-		'disable', _t('百度收录自动推送'), _t('接口调用地址需前往 <a href="https://ziyuan.baidu.com/linksubmit/index?site=" target="_blank">百度搜索资源平台</a> 申请，请在下方填写地址后再启用，否则将卡死'));
+		'disable', _t('百度收录自动推送'), _t('接口调用地址需前往 <a href="https://ziyuan.baidu.com/linksubmit/index?site=" target="_blank">百度搜索资源平台</a> 申请，请在下方填写地址后再启用，否则将卡死')
+	);
 	$form->addInput($baiduPush);
 
 	// 百度收录自动推送接口调用地址
@@ -128,10 +145,12 @@ function themeConfig($form) {
 
 	// Umami
 	$umamiDoNotTrack = new Typecho_Widget_Helper_Form_Element_Radio('umamiDoNotTrack',
-		array('true' => _t('是'),
+		array(
+			'true' => _t('是'),
 			'false' => _t('否'),
 		),
-		'disable', _t('Umami 请勿跟踪'), _t('Umami 是否响应请勿跟踪请求'));
+		'false', _t('Umami 请勿跟踪'), _t('Umami 是否响应请勿跟踪请求')
+	);
 	$form->addInput($umamiDoNotTrack);
 
 	// 底部自定义
@@ -169,7 +188,7 @@ function parseContent($obj) {
 		$obj->content = str_ireplace($widgetOptions->src_add,$widgetOptions->cdn_add,$obj->content);
 	}
 
-	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.16/images/lazyload.jpg" alt="$2" data-src="$1" />', $obj->content);
+	$obj->content = preg_replace('/<\s*img[\s\S]+?(?:src=[\'"]([\S\s]*?)[\'"]\s*|alt=[\'"]([\S\s]*?)[\'"]\s*|[a-z]+=[\'"][\S\s]*?[\'"]\s*)+[\s\S]*?>/i','<img src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.17/images/lazyload.jpg" alt="$2" data-src="$1" />', $obj->content);
 	$obj->content = preg_replace("/<a href=\"([^\"]*)\">/i", "<a href=\"\\1\" target=\"_blank\">", $obj->content);
 	echo trim($obj->content);
 }

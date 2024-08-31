@@ -4,7 +4,7 @@
  * 
  * @package Simplecho
  * @author XiaoXi
- * @version 0.1.16
+ * @version 0.1.17
  * @link https://soraharu.com/
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -19,8 +19,8 @@ $this->need('header.php');
 		<span class="sticky-top-flag gt-bg-accent-color-first">置顶</span>
 		-->
 		<?php if ($this->is('index') && $this->_currentPage == 1): // 判断是否是首页 分页不输出 - 这段删了就是全站置顶 ?>
-		<?php if ($this->options->sticky): $this->options->sticky(); // 输出后台设置的手动置顶 ?>
-		<?php endif; ?>
+			<?php if ($this->options->sticky): $this->options->sticky(); // 输出后台设置的手动置顶 ?>
+			<?php endif; ?>
 		<?php endif; ?>
 
 		<?php while ($this->next()): ?>

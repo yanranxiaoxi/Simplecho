@@ -1,0 +1,123 @@
+.dark .gt-bg-theme-color-first {
+	background: #151617!important;
+}
+
+.dark .gt-bg-theme-color-second {
+	background: #1d1e1f!important;
+}
+
+.dark .gt-bg-content-color-first {
+	background: #e0eaef!important;
+}
+
+.dark .gt-bg-content-color-second {
+	background: #62686b!important;
+}
+
+.dark .gt-bg-accent-color-first {
+	background: #64b587!important;
+}
+
+.dark .gt-bg-accent-color-second {
+	background: RGBA(100,181,135,0.14)!important;
+}
+
+.dark .gt-c-theme-color-first {
+	color: #151617!important;
+}
+
+.dark .gt-c-theme-color-second {
+	color: #1d1e1f!important;
+}
+
+.dark .gt-c-content-color-first {
+	color: #e0eaef!important;
+}
+
+.dark .gt-c-content-color-second {
+	color: #62686b!important;
+}
+
+.dark .gt-c-accent-color-first {
+	color: #64b587!important;
+}
+
+.dark .gt-c-accent-color-second {
+	color: RGBA(100,181,135,0.14)!important;
+}
+
+body .dark {
+	color: #e0eaef!important;
+}
+
+.dark a {
+	color: #64b587!important;
+}
+
+.dark .post-content h1 {
+	display: inline-block;
+	color: #e0eaef!important;
+	position: relative!important;
+	background: linear-gradient(180deg, transparent 75%, RGBA(100,181,135,0.4) 0)!important;
+}
+
+.dark .post-content h2 {
+	display: inline-block;
+	color: #e0eaef!important;
+	position: relative!important;
+	background: linear-gradient(180deg, transparent 75%, RGBA(100,181,135,0.4) 0)!important;
+}
+
+.dark .gt-a-link {
+	color: #e0eaef!important;
+	position: relative!important;
+	background: linear-gradient(180deg, transparent 75%, RGBA(100,181,135,0.4) 0)!important;
+}
+
+.dark .gt-post-content a {
+	color: #64b587!important;
+}
+
+.dark .gt-post-content blockquote {
+	background: RGBA(100,181,135,0.14)!important;
+	border-color: #64b587!important;
+}
+
+.dark .gt-post-content code {
+	background: RGBA(100,181,135,0.14)!important;
+}
+
+.dark input::placeholder {
+	color: #62686b!important;
+}
+
+.dark .search-input {
+	color: #e0eaef!important;
+	background-color: #1d1e1f!important;
+}
+
+.dark #comments li.comment-body {
+	border-top: 1px solid #383a3e !important;
+	background: #1d1e1f !important;
+}
+
+.dark .comment-form {
+	background: #1d1e1f !important;
+}
+
+.dark .OwO .OwO-body .OwO-items .OwO-item {
+	background: #1d1e1f !important;
+}
+
+.dark #comments input, #comments textarea {
+	border-bottom: 1px solid #383a3e !important;
+}
+
+.dark .comment-body .respond {
+	background: #1d1e1f;
+}
+
+.dark #comments input,
+#comments textarea {
+	color: #FFF !important;
+}

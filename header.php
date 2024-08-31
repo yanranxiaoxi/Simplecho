@@ -21,14 +21,14 @@
 	<?php endif; ?>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.17/assets/css/main.min.css" />
-	<?php if ($this->options->themeColor === 0): ?>
+	<?php if ($this->options->themeColor == '0'): ?>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.17/assets/css/gray.min.css" />
-	<?php elseif ($this->options->themeColor === 1): ?>
+	<?php elseif ($this->options->themeColor == '1'): ?>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.17/assets/css/white.min.css" />
-	<?php elseif ($this->options->themeColor === 2): ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.17/assets/css/black.min.css" />
-	<?php elseif ($this->options->themeColor === 3): ?>
+	<?php elseif ($this->options->themeColor == '2'): ?>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.17/assets/css/green.min.css" />
+	<?php elseif ($this->options->themeColor == '3'): ?>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.17/assets/css/black.min.css" />
 	<?php else: ?>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.17/assets/css/gray.min.css" />
 	<?php endif; ?>
@@ -50,7 +50,7 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/owo@1.0.2/dist/OwO.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/console-ban@5.0.0/dist/console-ban.min.js"></script>
 </head>
-<body <?php echo $_COOKIE['prefers-color-scheme'] === 'dark' ? 'class="dark"' : ($_COOKIE['prefers-color-scheme'] === 'light' ? 'class="light"' : ''); ?>>
+<body <?php echo $_COOKIE['latest-prefers-color-scheme'] === 'dark' ? 'class="dark"' : ($_COOKIE['latest-prefers-color-scheme'] === 'light' ? 'class="light"' : ''); ?>>
 	<div class="main gt-bg-theme-color-first">
 		<div class="main-content" id="pjax">
 			<nav class="navbar navbar-expand-lg">

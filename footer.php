@@ -101,14 +101,14 @@
 			<?php endif; ?>
 
 			<?php if ($this->options->themeAutoDark === 'enable'): ?>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.18/assets/js/match-dark-mode.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.19/assets/js/match-dark-mode.min.js"></script>
 			<?php endif; ?>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.18/assets/js/img-lazy.min.js"></script>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.18/assets/js/moment.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.19/assets/js/img-lazy.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.19/assets/js/moment.min.js"></script>
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@11.0.2/dist/mermaid.min.js"></script>
 			<script>mermaid.init({noteMargin: 10}, ".lang-mermaid");</script>
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.18/assets/css/noticejs.min.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.19/assets/css/noticejs.min.css" />
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css" />
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/notice.js@0.4.0/dist/notice.min.js"></script>
 			<script type="text/javascript">
@@ -125,7 +125,7 @@
 			<script async src="<?php $this->options->umamiUrl(); ?>" data-website-id="<?php $this->options->umamiId(); ?>" data-do-not-track="<?php $this->options->umamiDoNotTrack(); ?>"></script>
 			<?php endif; ?>
 			<?php if ($this->options->returnTop === 'enable'): ?>
-			<script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.18/assets/js/lamu-leimu.min.js"></script>
+			<script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/yanranxiaoxi/Simplecho@0.1.19/assets/js/lamu-leimu.min.js"></script>
 			<?php endif; ?>
 		</div>
 	</div>

@@ -24,6 +24,9 @@
 
 			</div>
 			<div class="post-content">
+				<?php if ($this->options->themeCopyright === 'enable'): ?>
+					<blockquote><p>&copy;版权声明： 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" alt="BY-NC-SA" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</p></blockquote>
+				<?php endif; ?>
 				<?php parseContent($this); ?>
 			</div>
 
